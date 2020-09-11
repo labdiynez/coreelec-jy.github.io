@@ -87,7 +87,7 @@ main
 
 edit_rclone_service() {
 echo -e "${Green}<--- Rclone Service Edit --->${Font}"
-read -p "Please Input [Service Name]: " service_name
+read -p "Please Input [Service Name] default rclone : " service_name
 nano /etc/systemd/system/${service_name}.service
 echo -e "${Green}<--- Complete Rclone Service Edit --->${Font}"
 sleep 5
@@ -104,7 +104,7 @@ main
 
 add_swap(){
 echo -e "${Green}Please enter the swap to be added, it is recommended to be 2 times the memory!${Font}"
-read -p "Please Input [Swap Size]: " swapsize
+read -p "Please Input [Swap Size] : " swapsize
 
 grep -q "swapfile" /etc/fstab
 
