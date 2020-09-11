@@ -1,4 +1,9 @@
-#!/bin/bash
+#!/usr/bin/env bash
+PATH=/bin:/sbin:/usr/bin:/usr/sbin:/usr/local/bin:/usr/local/sbin:~/bin
+export PATH
+
+
+
 Green="\033[32m"
 Font="\033[0m"
 Red="\033[31m"
