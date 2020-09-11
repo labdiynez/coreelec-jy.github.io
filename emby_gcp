@@ -85,9 +85,10 @@ sleep 5
 main
 }
 
+#แก้ไขเซอร์วิส
 edit_rclone_service() {
-echo -e "${Green}<--- Rclone Service Edit --->${Font}"
-read -p "Please Input [Service Name] default rclone : " service_name
+echo -e "${Green}<--- Edit Rclone Service Default Service Name rclone --->${Font}"
+read -p "Please Input [Service Name] : " service_name
 nano /etc/systemd/system/${service_name}.service
 echo -e "${Green}<--- Complete Rclone Service Edit --->${Font}"
 sleep 5
@@ -102,6 +103,7 @@ sleep 5
 main
 }
 
+#เพิ่ม swap
 add_swap(){
 echo -e "${Green}Please enter the swap to be added, it is recommended to be 2 times the memory!${Font}"
 read -p "Please Input [Swap Size] : " swapsize
@@ -125,6 +127,7 @@ sleep 5
 main
 }
 
+#ลบ swap
 del_swap(){
 grep -q "swapfile" /etc/fstab
 
@@ -142,6 +145,7 @@ sleep 5
 main
 }
 
+#เพิ่มเมาต์ rclone เซอร์วิส
 add_rclone_service(){
 echo -e "${Green}<--- Add Rclone Service --->${Font}"
 read -p "Please Input [Service Name]: " service_name
@@ -159,6 +163,7 @@ Type=notify
 Environment=RCLONE_CONFIG=/root/.config/rclone/rclone.conf
 KillMode=none
 RestartSec=5
+#Please Edit remote_name and location_mount
 ExecStart=/usr/bin/rclone mount remote_name: location_mount \
 --allow-other \
 --dir-cache-time 1000h \
@@ -171,6 +176,7 @@ ExecStart=/usr/bin/rclone mount remote_name: location_mount \
 --buffer-size 16M \
 --vfs-read-chunk-size-limit 1G \
 --vfs-read-chunk-size 32M
+#Please Edit location_mount
 ExecStop=/bin/fusermount -uz location_mount
 Restart=on-failure
 
@@ -187,6 +193,7 @@ sleep 5
 main
 }
 
+#เพิ่มรีโมท rclone
 rclone_add_remote() {
 echo -e "${Green}<--- Rclone Add Remote --->${Font}"
 read -p "Please Input [Remote Name]: " remote_name
@@ -197,6 +204,7 @@ sleep 5
 main
 }
 
+#เมนู
 main(){
 root_need
 ovz_no
@@ -252,7 +260,3 @@ case "$num" in
     esac
 }
 main
-
-
-
-#ssh test script 34.121.150.77
