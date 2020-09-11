@@ -77,9 +77,11 @@ sleep 5
 main
 }
 
+#เช็คสถานะเซอร์วิส
 status_all() {
-echo -e "${Green}<--- Check Status Service --->${Font}"
-systemctl status emby-server rclone
+echo -e "${Green}<--- Check Status Service Default Service Name rclone emby-server --->${Font}"
+read -p "Please Input [Service Name] : " service_name
+systemctl status ${service_name}
 echo -e "${Green}<--- Complete Check Status Service --->${Font}"
 sleep 5
 main
@@ -95,6 +97,7 @@ sleep 5
 main
 }
 
+#แก้ไขคอนฟิก rclone
 edit_rclone_config() {
 echo -e "${Green}<--- Rclone Config File Edit --->${Font}"
 nano /root/.config/rclone/rclone.conf
@@ -214,11 +217,11 @@ echo -e "${Green}Script GCP Install Embyserver And Rclone Mount By Jirayut Yoona
 echo -e "${Green}################################################################${Font}"
 echo -e "${Green}1. Install EmbyServer, Rclone Config, Rclone Mount Service${Font}"
 echo -e "${Green}2. Check Status Service${Font}"
-echo -e "${Green}3. Rclone Add Remote${Font}"
-echo -e "${Green}4. Rclone Service Edit${Font}"
-echo -e "${Green}5. Rclone Config File Edit${Font}"
+echo -e "${Green}3. Add Rclone Remote${Font}"
+echo -e "${Green}4. Edit Rclone Service${Font}"
+echo -e "${Green}5. Edit Rclone Config${Font}"
 echo -e "${Green}6. Add Swap${Font}"
-echo -e "${Green}7. Del Swap${Font}"
+echo -e "${Green}7. Delete Swap${Font}"
 echo -e "${Green}8. Add Rclone Service#${Font}"
 echo -e "${Green}9. Exit${Font}"
 echo -e "${Green}################################################################${Font}"
