@@ -61,10 +61,7 @@ ExecStart=/usr/bin/rclone mount gmedia: /mnt/gmedia \
 --poll-interval 1000h \
 --umask 000 \
 --default-permissions \
---user-agent embyapp \
---buffer-size 16M \
---vfs-read-chunk-size-limit 1G \
---vfs-read-chunk-size 32M
+--user-agent embyapp
 ExecStop=/bin/fusermount -uz /mnt/gmedia
 Restart=on-failure
 
