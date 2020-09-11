@@ -252,7 +252,3 @@ case "$num" in
     esac
 }
 main
-
-
-
-#ssh test script 34.121.150.77
