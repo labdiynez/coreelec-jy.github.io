@@ -239,7 +239,7 @@ case "$num" in
     ;;
     8)
     add_rclone_service
-    ;;   
+    ;;
     9)
     exit 1
     ;;
