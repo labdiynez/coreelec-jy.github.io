@@ -26,6 +26,7 @@ echo -e "${Green}<--- Complete Rclone Install --->${Font}"
 
 #ติดตั้ง embyserver
 echo -e "${Green}<---Installing EmbyServer --->${Font}"
+echo -e "${Green}<--- Embyserver Versions 4.4.3.0 or 4.5.0.25 --->${Font}"
 read -p "Please Input [Embyserver Versions]: " embyserver_version
 cd /tmp
 wget https://github.com/MediaBrowser/Emby.Releases/releases/download/${embyserver_version}/emby-server-deb_${embyserver_version}_amd64.deb
