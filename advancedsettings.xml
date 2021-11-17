@@ -1,9 +1,22 @@
 <advancedsettings>
-	<cache>
-		<buffermode>1</buffermode>
-		<memorysize>524288000</memorysize>
-		<readfactor>50</readfactor>
-		<curlclienttimeout>10</curlclienttimeout>
-		<curllowspeedtime>20</curllowspeedtime>
-	</cache>
+  <musiclibrary>
+    <backgroundupdate>true</backgroundupdate>
+  </musiclibrary>
+  <videolibrary>
+    <cleanonupdate>false</cleanonupdate>
+  </videolibrary>
+  <video>
+    <ignorepercentatend>10</ignorepercentatend>
+    <playcountminimumpercent>90</playcountminimumpercent>
+    <ignoresecondsatstart>60</ignoresecondsatstart>
+  </video>
+  <cache>
+    <buffermode>1</buffermode>
+    <memorysize>139460608</memorysize>
+    <readfactor>20</readfactor>
+  </cache>
+  <network>
+    <curllowspeedtime>120</curllowspeedtime>
+    <curlclienttimeout>120</curlclienttimeout>
+  </network>
 </advancedsettings>
