@@ -12,11 +12,11 @@
   </video>
   <cache>
     <buffermode>1</buffermode>
-    <memorysize>139460608</memorysize>
-    <readfactor>20</readfactor>
+    <memorysize>524288000</memorysize>
+    <readfactor>50</readfactor>
   </cache>
   <network>
-    <curllowspeedtime>120</curllowspeedtime>
-    <curlclienttimeout>120</curlclienttimeout>
+    <curllowspeedtime>500</curllowspeedtime>
+    <curlclienttimeout>500</curlclienttimeout>
   </network>
 </advancedsettings>
