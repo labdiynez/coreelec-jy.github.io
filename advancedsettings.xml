@@ -10,13 +10,22 @@
     <playcountminimumpercent>90</playcountminimumpercent>
     <ignoresecondsatstart>60</ignoresecondsatstart>
   </video>
+  <splash>false</splash>
   <cache>
     <buffermode>1</buffermode>
     <memorysize>524288000</memorysize>
     <readfactor>50</readfactor>
   </cache>
   <network>
-    <curllowspeedtime>120</curllowspeedtime>
-    <curlclienttimeout>120</curlclienttimeout>
+    <curlclienttimeout>120</curlclienttimeout>  <!-- Timeout in seconds for libcurl (http/ftp) connections -->
+    <curllowspeedtime>120</curllowspeedtime>    <!-- Time in seconds for libcurl to consider a connection lowspeed -->
+    <curlretries>2</curlretries>               <!-- Amount of retries for certain failed libcurl operations (e.g. timeout) -->
+    <httpproxyusername></httpproxyusername>    <!-- username for Basic Proxy Authentication -->
+    <httpproxypassword></httpproxypassword>    <!-- password for Basic Proxy Authentication -->
+    <disableipv6>true</disableipv6>           <!-- Certain hardware/OS combinations have trouble with ipv6. Set "true" to disable -->
+    <disablehttp2>false</disablehttp2>         <!-- Added in v19- Allows disabling HTTP2 for broken Curl / HTTP2 servers -->
+    <nfstimeout>30</nfstimeout>                <!-- Added in v19- Timeout in seconds for NFS access, 0 = wait forever (previous behaviour) default is 5s  -->
+    <catrustfile></catrustfile>        <!-- Added in v19- Allows specifying a custom SSL CA trust store bundle. e.g. special://masterprofile/cacerts.pem -->
+    <curlkeepaliveinterval>30</curlkeepaliveinterval>     <!-- Added in v19- Enable TCP keepalive probes in curl --> 
   </network>
 </advancedsettings>
