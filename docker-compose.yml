@@ -1,0 +1,16 @@
+services:
+  homer:
+    container_name: "homer"
+    environment:
+      - "GID=1000"
+      - "UID=1000"
+    image: "b4bz/homer:latest"
+    logging:
+      driver: "json-file"
+      options: {}
+    network_mode: "bridge"
+    ports:
+      - "18080:8080/tcp"
+    restart: "always"
+    volumes:
+      - "/srv/dev-disk-by-uuid-1cdd6fef-1190-45ad-8823-56597e76a159/appdata/homer:/www/assets"
